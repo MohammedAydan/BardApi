@@ -23,6 +23,10 @@ const Q = async (q) => {
   }
 };
 
+app.get("/", (req, res) => {
+  res.send("Hello World");
+});
+
 app.get("/BardApi/:q", async (req, res) => {
   const { q } = req.params;
   const response = await Q(q);
